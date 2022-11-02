@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户界面</title>
+</head>
+<body>
+<div align="center">
+    <form action="./" method="post">
+    <table border="1">
+        <tr>
+            <td>id</td>
+            <td>user_name</td>
+            <td>birthday</td>
+            <td>sex </td>
+            <td>address</td>
+        </tr>
+        <tr th:each="user:${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.user_name}"></td>
+            <td th:text="${user.birthday}"></td>
+            <td th:text="${user.sex}"></td>
+            <td th:text="${user.address}"></td>
+        </tr>
+    </table>
+        <input type="submit" value="返回主界面">
+    </form>
+</div>
+
+</body>
+</html>

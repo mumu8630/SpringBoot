@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户页面</title>
+</head>
+<body>
+<div align="center">
+    <h3>用户界面</h3>
+    <form method="post" action="./">
+    <table border="1">
+        <tr>
+            <td>id:</td>
+            <td th:text="${user.id}"></td>
+        </tr>
+        <tr>
+            <td>userName:</td>
+            <td th:text="${user.user_name}"></td>
+        </tr>
+        <tr>
+            <td>birthday:</td>
+            <td th:text="${user.birthday}"></td>
+        </tr>
+        <tr>
+            <td>sex:</td>
+            <td th:text="${user.sex}"></td>
+        </tr>
+        <tr>
+            <td>address:</td>
+            <td th:text="${user.address}"></td>
+        </tr>
+    </table>
+        <input type="submit" value="返回主界面">
+    </form>
+</div>
+
+</body>
+</html>
